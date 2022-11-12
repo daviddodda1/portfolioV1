@@ -22,7 +22,7 @@ jobs:
         run: npm run build # The build command of your project
 
       - name: Making Build Folder
-        run: mkdir build && cp -R ./out ./build
+        run: mkdir build && cp -R ./out/* ./build
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
