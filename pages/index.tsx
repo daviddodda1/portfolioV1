@@ -236,13 +236,13 @@ export default function Home() {
                 <span
                   onClick={() =>
                     window.open(
-                      "https://github.com/davidreddy293/portfolioV1",
+                      "https://github.com/davidreddy293/cloudflare_ddns",
                       "_blank"
                     )
                   }
                   className={styles.links}
                 >
-                  <span style={{ color: "#ccc" }}> {"altMoralis"}</span>
+                  <span style={{ color: "#ccc" }}> {"Cloud Flare DDNS"}</span>
                   <span
                     style={{ backgroundColor: "#ccc" }}
                     className={styles.underline}
