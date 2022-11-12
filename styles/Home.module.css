@@ -1,14 +1,15 @@
 .container {
   padding: 0 2rem;
+  height: 100vh;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 1rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
@@ -126,4 +127,257 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+.MainNameText {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.blueText {
+  color: #69ced4;
+}
+
+.AgeText {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.links {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.underline {
+  display: block;
+  height: 2px;
+  margin: 0 auto;
+  width: 0;
+  transition: width 0.15s linear;
+  background-color: #69ced4;
+}
+
+.underlineSelected {
+  display: block;
+  height: 2px;
+  margin: 0 auto;
+  width: 0;
+  transition: width 0.15s linear;
+  background-color: #69ced4;
+  width: 100%;
+}
+
+.underlineNotSelected {
+  display: block;
+  height: 2px;
+  margin: 0 auto;
+  width: 0;
+  transition: width 0.15s linear;
+  background-color: #69ced4;
+  width: 0%;
+}
+
+*:hover > .underline,
+.active > .underline {
+  width: 100%;
+}
+
+.LanguagesUsed {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.otherLanguagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 60%;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.otherLanguagesContainer > span {
+  margin: 0 0.5rem;
+}
+
+.SocialMediaContainer {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+.threejsCanvas {
+  width: 30%;
+  height: 60vh;
+}
+
+.languagesSelectionContainer {
+  display: flex;
+  width: 100%;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+
+.lanuagesArticlesContainer {
+  width: 70%;
+}
+
+.LanuagesArticlesList {
+  padding: 1rem;
+  border: 2px solid #fff;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.LanuagesArticlesListHeading > h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+  display: block;
+}
+
+.LanuagesArticlesListHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.LanguagesArticlesProjectSelectionContainer {
+  display: flex;
+}
+
+.LanguagesArticlesProjectSelection {
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background: #000;
+  border-radius: 5px;
+}
+
+.LanguagesArticlesProjectSelectionActive {
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background: #fff;
+  color: #000;
+  border-radius: 5px;
+}
+
+.LanuagesArticlesListArticle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.ArticlesListMainContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.ProjectCardContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #222;
+  width: 49%;
+  margin-bottom: 1rem;
+  border: 1px solid #777;
+  min-height: 5rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.ProjectCardDate {
+  font-size: 01rem;
+  color: #69ced4;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.75rem;
+}
+
+.ProjectCardHeading {
+  margin-bottom: 0.75rem;
+}
+
+.ProjectCardTags {
+  font-size: 01rem;
+  color: #69ced4;
+  margin-top: auto;
+}
+
+.ProjectCardTags > span {
+  margin: 0 0.5rem 0 0;
+}
+
+/* Article Card */
+
+.ArticleCardContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #000;
+  width: 49%;
+  margin-bottom: 1rem;
+  border: 1px solid #777;
+  min-height: 5rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.ArticleCardDate {
+  font-size: 01rem;
+  color: #69ced4;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.75rem;
+}
+
+.ArticleCardHeading {
+  margin-bottom: 0.75rem;
+}
+
+.ArticleCardTags {
+  font-size: 01rem;
+  color: #69ced4;
+  margin-top: auto;
+}
+
+.ArticleCardTags > span {
+  margin: 0 0.5rem 0 0;
+}
+
+.Spinner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  background-color: #000;
+}
+
+.SpinnerImg {
+  border-radius: 100px;
 }
