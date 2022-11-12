@@ -59,8 +59,8 @@ export default function Home() {
 
   const main_ref = useRef(null);
   const mouse = useMouse(main_ref, {
-    enterDelay: 100,
-    leaveDelay: 100,
+    enterDelay: 0,
+    leaveDelay: 0,
   });
   setInterval(() => {
     const now = new Date().getTime();
@@ -77,14 +77,13 @@ export default function Home() {
   }, []);
 
   return (
-    <Suspense fallback={<Spinner />}>
-      <motion.div ref={main_ref} className={styles.container}>
-        <Head>
-          <title>David Dodda</title>
-          {/* TODO: Update after branding */}
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
+    <div ref={main_ref} className={styles.container}>
+      <Head>
+        <title>David Dodda</title>
+        {/* TODO: Update after branding */}
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Suspense fallback={<Spinner />}>
         <main className={styles.main}>
           {pageLoading ? (
             <motion.div className={styles.Spinner}>
@@ -285,8 +284,8 @@ export default function Home() {
             ""
           )}
         </main>
-      </motion.div>
-    </Suspense>
+      </Suspense>
+    </div>
   );
 }
 
@@ -338,6 +337,7 @@ function Head3DObj(props: any) {
   const max_tilt = Math.PI / 4;
   const [rotVec, setRotVec] = useState([Math.PI / 2, 0, 0]);
   useFrame((state, delta) => {
+    console.log(props.mouse.x);
     if (
       props.mouse.x &&
       props.mouse.y &&
